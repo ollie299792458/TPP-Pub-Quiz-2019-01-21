@@ -29,7 +29,7 @@ public class Primes {
         return prime[n];
     }
 
-    private class PrimesException extends ArrayIndexOutOfBoundsException {
+    public class PrimesException extends ArrayIndexOutOfBoundsException {
         public PrimesException(String error) {
             super(error);
         }
