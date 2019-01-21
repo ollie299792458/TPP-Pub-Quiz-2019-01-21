@@ -22,10 +22,16 @@ public class Primes {
         }
     }
 
-    public boolean isPrime(int n) {
+    public boolean isPrime(int n) throws PrimesException {
         if (n >= prime.length) {
-            throw new ArrayIndexOutOfBoundsException("Primes out of range");
+            throw new PrimesException("Primes out of range");
         }
         return prime[n];
+    }
+
+    private class PrimesException extends ArrayIndexOutOfBoundsException {
+        public PrimesException(String error) {
+            super(error);
+        }
     }
 }
